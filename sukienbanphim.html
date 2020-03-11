@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="cr7" src="https://media.thethao247.vn/upload/thanhtung/2019/09/17/cristiano-ronaldo-kit-jeep.jpg" style="position:absolute;left: 0;top: 0 " height="100" width="80">
+<script>
+    function dilen() {
+        let element=document.getElementById("cr7");
+        element.style.top=parseInt(element.style.top)-5+'px';}
+        function dixuong() {
+            let element=document.getElementById("cr7");
+            element.style.top=parseInt(element.style.top)+5+'px';}
+            function sangtrai() {
+                let element=document.getElementById("cr7");
+                element.style.left=parseInt(element.style.left)-5+'px';}
+                function sangphai() {
+                    let element=document.getElementById("cr7");
+                    element.style.left=parseInt(element.style.left)+5+'px';
+
+                }
+
+
+
+
+
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                sangtrai();
+                break;
+            case 39:
+                 sangphai();
+                break;
+            case 38:
+                dilen();
+                break;
+            case 40:
+                dixuong()
+
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+
+</script>
+<body onload="docReady()">
+</body>
+</html>
